@@ -1,7 +1,7 @@
 steps: 
   # Build the frontend Docker image with build-time env var 
   - name: 'gcr.io/cloud-builders/docker' 
-    args: ['build', '--build-arg', 'VITE_API_URL=YOUR_BACKEND_DEPLOYMENT_URL_HERE', '-t', 'gcr.io/$PROJECT_ID/recipe-frontend', './frontend'] 
+    args: ['build', '--build-arg', 'VITE_API_URL=https://recipe-backend-398102640590.us-central1.run.app', '-t', 'gcr.io/$PROJECT_ID/recipe-frontend', './frontend'] 
   
   # Push the image to Container Registry 
   - name: 'gcr.io/cloud-builders/docker' 
